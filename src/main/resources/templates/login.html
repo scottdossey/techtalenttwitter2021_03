@@ -3,12 +3,9 @@
 
 <head>
     <title>Log in</title>
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.1/css/all.css">
-    <link rel="stylesheet" href="/custom.css">
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-    <script src="/custom.js"></script>
+    <!-- Code Change for homework Day2 Q3 -->
+    <th:block th:replace="fragments/header">
+    <!-- End Code Change for homework Day2 Q3 -->    
 </head>
 <body>
     <div class="container">
@@ -19,9 +16,12 @@
             <input type="password" th:placeholder="Password" id="password" name="password" class="form-control"/> <br/>
             <div align="center" th:if="${param.error}">
                 <h4 style="color: red">Login unsuccessful.</h4>
-            </div>
-            <button class="btn btn-md btn-success btn-block" name="Submit" value="Login" type="Submit">Log in</button> 
-        </form>      
+            </div>            	
+            <button class="btn btn-md btn-success btn-block" name="Submit" value="Login" type="Submit">Log in</button>
+            <!-- CODE CHANGE FOR HOMEWORK DAY2 Q1 -->
+            <a th:href="@{/signup}" class = "btn btn-md btn-primary btn-block">Signup</a> 
+            <!-- END CODE CHANGE FOR HOMEWORK DAY2 Q1 -->
+        </form>              
     </div>
 </body>
 </html>
